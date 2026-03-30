@@ -36,4 +36,7 @@ pip install numpy pandas scikit-learn scipy biopython transformers
 
 # 4. 安装 RDKit
 conda install -c conda-forge rdkit==2022.03.2
+
+# 5. 启动
+python main.py
 ```
