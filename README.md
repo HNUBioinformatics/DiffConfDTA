@@ -1,12 +1,12 @@
 # DiffConf-DTA: Drug-Target Binding Affinity Prediction
 
-本项目提供了一个用于预测药物-靶点结合亲和力（Drug-Target Affinity, DTA）的深度学习模型。模型结合了**图卷积神经网络（GCN）**提取药物分子图特征，以及**注意力机制（Transformer/Conformer）**提取蛋白质序列特征，通过多模态特征融合进行精准的结合亲和力预测。
+This project provides a deep learning model for predicting drug-target affinity (DTA). The model combines a graph convolutional neural network (GCN) to extract drug molecule graph features and an attention mechanism (Transformer/Conformer) to extract protein sequence features, achieving accurate binding affinity prediction through multimodal feature fusion.
 
-## ⚙️ 环境依赖 (Dependencies)
+##  Dependencies
 
-本项目主要在 **Python 3.10** 和 **CUDA 11.8** 环境下开发与测试。我们建议使用 `conda` 创建虚拟环境并安装所需的依赖库。
+This project is primarily developed and tested in a Python 3.10 and CUDA 11.8 environment. We recommend using `conda` to create a virtual environment and install the necessary dependencies.
 
-### 核心依赖库：
+### Requirements：
 
 - `pytorch == 2.3.1` (CUDA 11.8)
 - `torch-geometric == 2.3.1`
@@ -18,25 +18,25 @@
 - `scipy == 1.15.3`
 - `biopython == 1.86`
 
-### 环境配置步骤
+### Run
 
-你可以通过以下命令快速配置运行环境：
+You can quickly configure the runtime environment using the following commands:
 
 ```bash
-# 1. 创建 conda 虚拟环境
+# 1. Create a conda virtual environment
 conda create -n dta_env python=3.10
 conda activate dta_env
 
-# 2. 安装 PyTorch (带 CUDA 11.8 支持)
+# 2. Install PyTorch (with CUDA 11.8 support)
 conda install pytorch==2.3.1 torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 
-# 3. 安装 PyTorch Geometric 及其他计算库
+# 3. Install PyTorch Geometric and other computation libraries
 pip install torch_geometric==2.3.1
 pip install numpy pandas scikit-learn scipy biopython transformers
 
-# 4. 安装 RDKit
+# 4. Install RDKitt
 conda install -c conda-forge rdkit==2022.03.2
 
-# 5. 启动
+# 5. run
 python main.py
 ```
